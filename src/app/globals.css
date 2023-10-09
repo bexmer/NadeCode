@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-color: #171717;
+    @apply text-slate-100;
+}
+
+.filtro{
+    height: 100%;
+    margin: 10px;
+    background-color: #1F1F1F;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.principal{
+    margin-bottom: 20px;
+}
+
+/* .presPrin{
+    
+} */
+
+.divRaro{
+    border-right: solid 1px rgb(59, 59, 59);
+    border-left: solid 1px rgb(59, 59, 59);
+
+}
+
+.navPro{
+    background-color: #151515;
+    border-bottom: solid 3px rgb(59, 59, 59);
+}

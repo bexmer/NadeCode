@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.info div{
+    margin: 10px;
+}
+
+.CardIA{
+    background-color: #101010;
+    width: 310px;
+}
+
+.prinCar{
+    height: 91vh;
+    border-bottom: solid 3px rgb(59, 59, 59);
+}
+
+.laB{
+    height: 91vh;
+    border-left: solid 3px rgb(59, 59, 59);
+}
