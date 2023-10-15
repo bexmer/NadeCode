@@ -20,7 +20,7 @@ export default function CardIA({ data }) {
 
       {/* Descripción */}
       <div className="bg-stone-900 px-5 py-4 rounded-lg">
-        <p className="descri">{data.Descripcion}</p>
+        <p className="descri text-justify">{data.Descripcion}</p>
       </div>
 
       {/* Información */}

@@ -24,9 +24,13 @@ body{
 } */
 
 .divRaro{
-    border-right: solid 1px rgb(59, 59, 59);
-    border-left: solid 1px rgb(59, 59, 59);
+    display: block;
+    text-align: center;
+}
 
+.Credits h2{
+    font-size: 30px;
+    margin: 20px 0;
 }
 
 .navPro{
@@ -70,4 +74,12 @@ background-color: #134191;
 
 .precio{
 background-color: #de9d2d;
+}
+/* ! Todo Wallet */
+
+.todoWallet{
+    height: 85vh;    
+    border-right: solid 1px rgb(59, 59, 59);
+    border-left: solid 1px rgb(59, 59, 59);
+    margin: 0 40px;
 }

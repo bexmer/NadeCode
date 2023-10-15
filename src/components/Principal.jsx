@@ -1,14 +1,29 @@
 import React from "react";
+import Link from "next/link";
 
 export default function Principal() {
   return (
-    <div className="h-96 prinCar flex">
-      <div className="basis-3/5">
-        <div className="h-96 prinCar divRaro mx-10 pt-16">
-          <div className="bg-neutral-800 h-96 mx-4 mb-4 rounded-lg">
-            <img src="" alt="" />
-          </div>
-          <h1 className="text-2xl bg-zinc-800 m-4 p-2 rounded-lg">Titulo</h1>
+    <div className="prinCar flex ">
+      <div className="todoWallet basis-3/5">
+        <div className="divRaro mx-10 pt-16 m-auto">
+          <h1 className="text-2xl">Wallet Connect</h1>
+          
+          <p className="opacity-70 my-10">
+            Connect to your wallet and gain credits to the use of the models.
+          </p>
+          
+          <button className="bg-blue-900 px-7 py-2 rounded-md active:opacity-60 hover:bg-violet-700 ">
+            Connect
+          </button>
+          <br />
+          <br />
+
+          <Link
+            href={"/creditos"}
+            className="bg-blue-700 px-7 py-2 rounded-md active:opacity-60 hover:bg-violet-700 mt-10"
+          >
+            Creditos
+          </Link>
         </div>
       </div>
       <div className="laB basis-2/5 p-6">

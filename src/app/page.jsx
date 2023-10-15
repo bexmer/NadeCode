@@ -1,7 +1,7 @@
-import CardIA from "../components/CardIA";
-import Filtro from "@/components/Filtro";
+// import CardIA from "../components/CardIA";
+// import Filtro from "@/components/Filtro";
 import Principal from "@/components/Principal";
-import Link from "next/link";
+// import Link from "next/link";
 
 import datos from "@/api/ia.json";
 console.log(datos);
@@ -12,7 +12,7 @@ export default function Home() {
       <div className="principal">
         <Principal />
       </div>
-      <div className="flex mb-10 mt-9">
+      {/* <div className="flex mb-10 mt-9">
         <div className="basis-3/12">
           <Filtro />
         </div>
@@ -25,7 +25,7 @@ export default function Home() {
             )
           })}
         </div>
-      </div>
+      </div> */}
     </main>
   );
 }
