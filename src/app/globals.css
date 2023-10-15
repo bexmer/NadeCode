@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-color: #171717;
+    @apply text-slate-100;
+}
+
+.filtro{
+    height: 100%;
+    margin: 10px;
+    background-color: #1F1F1F;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.principal{
+    margin-bottom: 20px;
+}
+
+/* .presPrin{
+    
+} */
+
+.divRaro{
+    display: block;
+    text-align: center;
+}
+
+.Credits h2{
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+.navPro{
+    background-color: #151515;
+    border-bottom: solid 3px rgb(59, 59, 59);
+}
+
+.descri{
+    display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+  line-height: 1.2em;
+  max-height: 8.6em;
+  text-overflow: ellipsis;
+}
+
+/* ! Pagina para cada tarjeta */
+
+.imgCard{
+    width: 100%;
+    height: 250px;
+}
+
+.buttCard{
+    width: 100%;
+    background-color: #0D8821;
+}
+
+.ladoDerecho p{
+    line-height: 25px ;
+}
+
+.estado{
+background-color: #C70039;
+}
+
+.categoria{
+background-color: #134191;
+}
+
+.precio{
+background-color: #de9d2d;
+}
+/* ! Todo Wallet */
+
+.todoWallet{
+    height: 85vh;    
+    border-right: solid 1px rgb(59, 59, 59);
+    border-left: solid 1px rgb(59, 59, 59);
+    margin: 0 40px;
+}

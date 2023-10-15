@@ -1,0 +1,11 @@
+[
+    {
+        "Id": 1,
+        "Titulo": "ChatGPT",
+        "Descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque odit consequatur fugiat voluptate laboriosam, quaerat ab esse obcaecati debitis cupiditate sit accusantium quasi necessitatibus quia distinctio blanditiis, pariatur earum neque repudiandae assumenda, voluptatum ex incidunt? Exercitationem eveniet, obcaecati commodi nulla tempore voluptas quisquam suscipit. Iste qui non, perspiciatis harum laborum, dicta molestias aspernatur sunt voluptate sit esse optio reprehenderit quasi quos error, architecto beatae ratione eaque enim ab vero voluptatibus cum! Tempora consequuntur corporis voluptate ipsam autem beatae? Eos impedit quaerat dolorum aut! Consectetur suscipit quod odit ut iusto eveniet eum sit maiores dolorem repudiandae! Placeat at accusamus debitis voluptate!",
+        "Imagen": "cht.jpg",
+        "Categoria": "Imagenes",
+        "Modo_Precio": "Free",
+        "Estado":true
+    }
+]

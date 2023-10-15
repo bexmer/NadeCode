@@ -1,0 +1,23 @@
+.navbar{
+    display: flex;
+    padding: 15px;
+    width: 60%;
+}
+
+.linkNav{
+    margin: 0 20px;
+}
+
+.butonBuscar{
+    background-color: #312783;
+    border-radius: 5px;
+    transition: .2s ease-in-out;
+}
+
+.butonBuscar:hover{
+    opacity: .7;
+}
+
+.butonBuscar:active{
+    opacity: 1;
+}
