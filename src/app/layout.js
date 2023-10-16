@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Kanit } from "next/font/google";
 import Navbar from "../components/Navbar";
+import Provider from "./components/Provider";
 
 const aqsqa = Kanit({
   weight: ["400"],
@@ -16,12 +17,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Provider>
       <body className={aqsqa.className}>
         <div className="flex basis-9/12 navPro">
           <Navbar />
         </div>
         {children}
       </body>
+      </Provider>
     </html>
   );
 }
