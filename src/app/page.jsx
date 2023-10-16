@@ -3,8 +3,8 @@
 import Principal from "@/components/Principal";
 // import Link from "next/link";
 
-import datos from "@/api/ia.json";
-console.log(datos);
+// import datos from "@/api/ia.json";
+// console.log(datos);
 
 export default function Home() {
   return (

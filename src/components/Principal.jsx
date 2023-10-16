@@ -61,7 +61,7 @@ export default function Principal() {
       <Toaster position="bottom-center" />
       <div className="todoWallet basis-3/5">
         <div className="divRaro mx-10">
-          <h1 className="text-3xl font-bold">Wallet Connect</h1>
+          <h1 className="text-3xl font-bold mt-10">Wallet Connect</h1>
 
           <p className="opacity-70 my-10">
             Connect to your wallet and gain credits to the use of the models.
