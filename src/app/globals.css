@@ -26,6 +26,8 @@ body{
 .divRaro{
     display: block;
     text-align: center;
+    height: 85vh;
+    padding: 20% 0;
 }
 
 .Credits h2{
@@ -35,7 +37,6 @@ body{
 
 .navPro{
     background-color: #151515;
-    border-bottom: solid 3px rgb(59, 59, 59);
 }
 
 .descri{
@@ -81,5 +82,6 @@ background-color: #de9d2d;
     height: 85vh;    
     border-right: solid 1px rgb(59, 59, 59);
     border-left: solid 1px rgb(59, 59, 59);
+    
     margin: 0 40px;
 }
