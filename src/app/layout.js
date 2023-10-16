@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Kanit } from "next/font/google";
 import Navbar from "../components/Navbar";
+import Provider from "@/app/components";
 
 const aqsqa = Kanit({
   weight: ["400"],
