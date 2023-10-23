@@ -18,12 +18,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Provider>
-      <body className={aqsqa.className}>
-        <div className="flex basis-9/12 navPro">
-          <Navbar />
-        </div>
-        {children}
-      </body>
+        <body className={aqsqa.className}>
+          <div className="flex basis-9/12 navPro">
+            <Navbar />
+          </div>
+          {children}
+        </body>
       </Provider>
     </html>
   );

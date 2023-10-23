@@ -1,4 +1,5 @@
 "use client";
+import Sesiones from "./Sesiones";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import toast, { Toaster } from "react-hot-toast";
@@ -103,7 +104,9 @@ export default function Principal() {
           )}
         </div>
       </div>
-      <div className="laB basis-2/5 p-6"></div>
+      <div className="laB basis-2/5 p-6">
+        <Sesiones/>
+      </div>
     </div>
   );
 }

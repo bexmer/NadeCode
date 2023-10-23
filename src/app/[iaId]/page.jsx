@@ -1,4 +1,4 @@
-import data from "@/api/ia.json";
+// import data from "@/api/ia.json";
 
 // async function loadPost(id) {
 //   const data = await datos[id];
@@ -30,10 +30,10 @@ export default async function IAverPage({ params }) {
             {/* {estado()} */}
           </div>
           <div className="basis-1/3 categoria mx-4 rounded-sm py-1">
-            <h1>{data.Categoria}</h1>
+            {/* <h1>{data.Categoria}</h1> */}
           </div>
           <div className="basis-1/3 precio ml-4 rounded-sm py-1">
-            <h1>{data.Modo_Precio}</h1>
+            {/* <h1>{data.Modo_Precio}</h1> */}
           </div>
         </div>
 
