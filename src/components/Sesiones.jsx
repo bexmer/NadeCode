@@ -29,7 +29,7 @@ export default function Sesiones() {
   };
   return (
     <div className="m-5 content-center">
-      <h1 className="text-4xl font-semibold text-center">Login</h1>
+      <h1 className="text-4xl font-semibold text-center">LogIn</h1>
       <form onSubmit={handleSubmit}>
         <div className="grid grid-cols-1">
           <label className="my-4" htmlFor="correo">
