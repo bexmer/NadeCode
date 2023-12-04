@@ -165,9 +165,9 @@ background-color: #de9d2d;
   width: 40px;
   height: 22px;
   display: block;
-  background: #c8ccd4;
+  @apply bg-zinc-700;
   border-radius: 12px;
-  transition: background 0.2s ease;
+  transition: apply 0.2s ease;
 }
 
 .checkbox-wrapper-51 .toggle span {
@@ -177,9 +177,9 @@ background-color: #de9d2d;
   width: 24px;
   height: 24px;
   display: block;
-  background: #fff;
+  background: #1c1c1c;
   border-radius: 50%;
-  box-shadow: 0 2px 6px rgba(154,153,153,0.75);
+  box-shadow: 0 2px 6px rgba(76, 76, 76, 0.75);
   transition: all 0.2s ease;
 }
 
@@ -189,7 +189,7 @@ background-color: #de9d2d;
 }
 
 .checkbox-wrapper-51 .toggle span svg path {
-  stroke: #c8ccd4;
+  stroke: #8b8b8b;
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -199,7 +199,7 @@ background-color: #de9d2d;
 }
 
 .checkbox-wrapper-51 input[type="checkbox"]:checked + .toggle:before {
-  background: #1175c7;
+  background: #312783;
 }
 
 .checkbox-wrapper-51 input[type="checkbox"]:checked + .toggle span {
@@ -207,7 +207,7 @@ background-color: #de9d2d;
 }
 
 .checkbox-wrapper-51 input[type="checkbox"]:checked + .toggle span path {
-  stroke: #000000;
+  stroke: #ffffff;
   stroke-dasharray: 25;
   stroke-dashoffset: 25;
 }

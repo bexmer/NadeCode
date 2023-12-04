@@ -13,7 +13,7 @@ export default function Navbar() {
       <Link className="linkNav" href={"/"}>
         Pre-training
       </Link>
-      <Link className="linkNav" href={"/"}>
+      <Link className="linkNav" href={"/puntos"}>
         Points
       </Link>
       <div className="linkNav">
