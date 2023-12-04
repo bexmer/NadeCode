@@ -1,9 +1,18 @@
-import React from 'react'
+import React from "react";
+import "@/app/globals.css";
 
 export default function loading() {
   return (
-    <div className='text-4xl flex items-center justify-center'>
-      <h1>Loading...</h1>
+    <div class="loader">
+      <div class="l"></div>
+      <div class="l"></div>
+      <div class="l"></div>
+      <div class="l"></div>
+      <div class="l"></div>
+      <div class="l"></div>
+      <div class="l"></div>
+      <div class="l"></div>
+      <div class="l"></div>
     </div>
-  )
+  );
 }

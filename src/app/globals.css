@@ -57,7 +57,6 @@ body{
 
 .buttCard{
     width: 100%;
-    background-color: #0D8821;
 }
 
 .ladoDerecho p{
@@ -82,4 +81,133 @@ background-color: #de9d2d;
     border-right: solid 1px rgb(59, 59, 59);
     border-left: solid 1px rgb(59, 59, 59);
     margin: 0 40px;
+}
+
+.butonCreate{
+    transition: .3s ease-in-out;
+    padding: 2px 0;
+    text-align: center;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+  }
+  
+  .l,.l:nth-child(9) {
+    margin: 0.15em;
+    border-radius: 5em;
+    width: 0.4em;
+    background-color: #1511f1;
+    height: 3em;
+    box-shadow: 1px 1px 4px black;
+    animation: load_5186 cubic-bezier(.41,.44,.72,.69) 2s infinite;
+  }
+  
+  .l:nth-child(2), 
+  .l:nth-child(8) {
+    background-color: #1356f2;
+    animation-delay: .25s;
+  }
+  
+  .l:nth-child(3), 
+  .l:nth-child(7) {
+    background-color: #155ff3;
+    animation-delay: .5s;
+  }
+  
+  .l:nth-child(4), 
+  .l:nth-child(6) {
+    background-color: #1782f4;
+    animation-delay: .75s;
+  }
+  
+  .l:nth-child(5) {
+    background-color: #1999f5;
+    animation-delay: 1s;
+  }
+  
+  @keyframes load_5186 {
+    0% {
+      transform: scaleY(1);
+    }
+  
+    100% {
+      transform: scaleY(-1);
+    }
+  }
+  ::-webkit-scrollbar {
+    display: none;
+}
+
+.checkbox-wrapper-51 input[type="checkbox"] {
+  visibility: hidden;
+  display: none;
+}
+
+.checkbox-wrapper-51 .toggle {
+  position: relative;
+  display: block;
+  width: 42px;
+  height: 24px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transform: translate3d(0, 0, 0);
+}
+
+.checkbox-wrapper-51 .toggle:before {
+  content: "";
+  position: relative;
+  top: 1px;
+  left: 1px;
+  width: 40px;
+  height: 22px;
+  display: block;
+  background: #c8ccd4;
+  border-radius: 12px;
+  transition: background 0.2s ease;
+}
+
+.checkbox-wrapper-51 .toggle span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  display: block;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(154,153,153,0.75);
+  transition: all 0.2s ease;
+}
+
+.checkbox-wrapper-51 .toggle span svg {
+  margin: 7px;
+  fill: none;
+}
+
+.checkbox-wrapper-51 .toggle span svg path {
+  stroke: #c8ccd4;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 24;
+  stroke-dashoffset: 0;
+  transition: all 0.5s linear;
+}
+
+.checkbox-wrapper-51 input[type="checkbox"]:checked + .toggle:before {
+  background: #1175c7;
+}
+
+.checkbox-wrapper-51 input[type="checkbox"]:checked + .toggle span {
+  transform: translateX(18px);
+}
+
+.checkbox-wrapper-51 input[type="checkbox"]:checked + .toggle span path {
+  stroke: #000000;
+  stroke-dasharray: 25;
+  stroke-dashoffset: 25;
 }

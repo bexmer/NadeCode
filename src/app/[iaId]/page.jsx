@@ -37,7 +37,17 @@ export default async function IAverPage({ params }) {
           </div>
         </div>
 
-        <button className="buttCard mb-7 rounded-sm py-1">Acceder</button>
+        <div className="flex flex-row mb-7">
+          <button className="buttCard  py-1 rounded-sm basis-1/3 bg-green-600">
+            Acceder
+          </button>
+          <button className="buttCard  py-1 rounded-sm basis-1/3 mx-4 bg-pink-800">
+            Edit
+          </button>
+          <button className="buttCard  py-1 rounded-sm basis-1/3 bg-red-600">
+            Delete
+          </button>
+        </div>
 
         <div className="flex mt-5 bg-stone-800 py-4 rounded-sm">
           <div className="py-2 px-3 mx-4 basis-1/2">
@@ -50,13 +60,13 @@ export default async function IAverPage({ params }) {
               Suscribete
             </button>
             <button className="bg-gray-800 py-2 px-3 mx-1 rounded-md">
-              Like
+              <img src="/src/img/thumbs-up.svg" alt="" />
             </button>
             <button className="bg-gray-800 py-2 px-3 mx-1 rounded-md">
-              Dislike
+              <img src="/src/img/thumbs-down.svg" alt="" />
             </button>
             <button className="bg-gray-800 py-2 px-3 mx-1 rounded-md">
-              Favorito
+              <img src="/src/img/bookmark.svg" alt="" />
             </button>
           </div>
         </div>

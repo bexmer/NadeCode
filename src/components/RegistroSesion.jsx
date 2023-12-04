@@ -36,28 +36,45 @@ const page = () => {
   };
 
   return (
-    <div className="w-1/4">
-      <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+    <div className="m-5 content-center">
+      <h1 className="text-4xl font-semibold text-center">SingUp</h1>
+      <form onSubmit={handleSubmit} className="grid grid-cols-1">
+        <label className="my-4" htmlFor="correo">
+          NAME
+        </label>
         <input
+          className="bg-zinc-700 p-2 rounded-md"
           type="text"
           name="usuario"
-          placeholder="Nombre"
+          placeholder="User"
           onChange={(e) => setNombre(e.target.value)}
         />
+        <label className="my-4" htmlFor="correo">
+          EMAIL
+        </label>
         <input
+          className="bg-zinc-700 p-2 rounded-md"
           type="email"
           name="correo"
-          placeholder="Correo"
+          placeholder="user@example.com"
           onChange={(e) => setCorreo(e.target.value)}
         />
+        <label className="my-4" htmlFor="correo">
+          PASSWORD
+        </label>
         <input
+          className="bg-zinc-700 p-2 rounded-md"
           type="password"
           name="Password"
           placeholder="*******"
           onChange={(e) => setContraseña(e.target.value)}
         />
         <div className="flex justify-center">
-          <input type="submit" value={"Sing up"} />
+          <input
+            className="bg-indigo-600 mt-10 px-16 py-1 rounded-md hover:opacity-70 active:bg-indigo-500"
+            type="submit"
+            value={"REGISTER"}
+          />
         </div>
       </form>
     </div>

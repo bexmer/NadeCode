@@ -7,7 +7,7 @@ export default function Navbar() {
       <Link className="linkNav" href={"/"}>
         NebulaCode
       </Link>
-      <Link className="linkNav" href={"/"}>
+      <Link className="linkNav" href={"/modelos"}>
         Product
       </Link>
       <Link className="linkNav" href={"/"}>
@@ -17,7 +17,7 @@ export default function Navbar() {
         Points
       </Link>
       <div className="linkNav">
-        <button  className="butonBuscar px-6 ">Search</button>
+        <button className="butonBuscar px-6 ">Search</button>
       </div>
     </section>
   );
