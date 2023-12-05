@@ -1,5 +1,5 @@
-import React from "react";
-import "@/components/todo.css";
+import React from 'react';
+import '@/components/todo.css';
 
 export default function CardIA({ data }) {
   return (
@@ -8,7 +8,7 @@ export default function CardIA({ data }) {
       <div className="flex justify-center bg-black">
         <img
           className="w-30 m-2 h-20 rounded-lg"
-          src={"/src/components/img/840_560.jpg"}
+          src={data.Imagen}
           alt="carro"
         />
       </div>

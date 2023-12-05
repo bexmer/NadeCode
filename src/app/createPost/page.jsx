@@ -1,42 +1,50 @@
-"use client";
-import { useReducer, useEffect, useState } from "react";
-import { reducer } from "./reducer";
-import { InitialValues } from "@/app/createPost/initialValues";
-import { useSession } from "next-auth/react";
-import "@/app/createPost/lol.css";
+'use client';
+import { useReducer, useEffect, useState } from 'react';
+import { reducer } from './reducer';
+import { InitialValues } from '@/app/createPost/initialValues';
+import { useSession } from 'next-auth/react';
+import '@/app/createPost/lol.css';
+import { useRouter } from 'next/navigation';
 
 const page = () => {
   const session = useSession();
   const [state, dispatch] = useReducer(reducer, InitialValues);
-  const [vendedor, setVendedor] = useState("");
+  const router = useRouter();
+  const [vendedor, setVendedor] = useState('');
 
   useEffect(() => {
-    if (session.data) {
-      setVendedor(session.data.user[0].Vendedor);
+    if (session.status !== 'loading') {
+      if (session.data.user.length > 0) {
+        setVendedor(session.data.user[0].Vendedor);
+      }
     }
   }, [session]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData();
-    formData.set("titulo", state.title);
-    formData.set("descripcion", state.description);
-    formData.set("imagen", state.image);
-    formData.set("categoria", state.category);
-    formData.set("modoPrecio", state.priceMode);
-    formData.set("estado", state.state);
+    formData.set('titulo', state.title);
+    formData.set('descripcion', state.description);
+    formData.set('imagen', state.image);
+    formData.set('categoria', state.category);
+    formData.set('modoPrecio', state.priceMode);
+    formData.set('estado', state.state);
 
-    const response = await fetch("/api/createProduct", {
-      method: "POST",
+    const response = await fetch('/api/createProduct', {
+      method: 'POST',
       body: formData,
     });
 
-    // const data = await response.json();
+    const data = await response.json();
+
+    if (data.status === 200) {
+      router.push('/');
+    }
   };
 
   //Cambia los estilos por unos bonitos, acuerdate, que estos nomas los hice
   //Para ver el formulario y hacer las pruebas, ni puse los labels por lo mismo
-  return true ? (
+  return vendedor ? (
     <form onSubmit={handleSubmit}>
       <div className="flex flex-row">
         <div className="basis-1/2 text-center divTD">
@@ -46,7 +54,7 @@ const page = () => {
             className="dimeInput input1"
             onChange={(e) =>
               dispatch({
-                type: "title",
+                type: 'title',
                 payload: e.target.value,
               })
             }
@@ -59,7 +67,7 @@ const page = () => {
             type="text"
             onChange={(e) =>
               dispatch({
-                type: "description",
+                type: 'description',
                 payload: e.target.value,
               })
             }
@@ -68,7 +76,7 @@ const page = () => {
             <input
               className="bg-green-700 buttonUE"
               type="submit"
-              value={"Send"}
+              value={'Send'}
             />
           </div>
         </div>
@@ -81,7 +89,7 @@ const page = () => {
               class="flex justify-center h-24 w-full rounded-md border border-input px-3 py-2 text-sm text-gray-200 file:border-0 file:bg-transparent file:text-gray-400 file:text-sm file:font-medium SubirImage"
               onChange={(e) => {
                 dispatch({
-                  type: "image",
+                  type: 'image',
                   payload: e.target.files[0],
                 });
               }}
@@ -95,7 +103,7 @@ const page = () => {
                 type="text"
                 onChange={(e) =>
                   dispatch({
-                    type: "category",
+                    type: 'category',
                     payload: e.target.value,
                   })
                 }
@@ -108,7 +116,7 @@ const page = () => {
                 type="text"
                 onChange={(e) =>
                   dispatch({
-                    type: "priceMode",
+                    type: 'priceMode',
                     payload: e.target.value,
                   })
                 }
