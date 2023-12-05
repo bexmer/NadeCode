@@ -41,16 +41,6 @@ const page = () => {
       <form onSubmit={handleSubmit} className="grid">
         <div className="flex flex-row">
           <div className="basis-1/2 my-4 mr-1">
-            <label htmlFor="correo">NAME</label>
-            <input
-              className="bg-zinc-700 p-2 rounded-md mt-4 w-full"
-              type="text"
-              name="usuario"
-              placeholder="User"
-              onChange={(e) => setNombre(e.target.value)}
-            />
-          </div>
-          <div className="basis-1/2 my-4 ml-1">
             <label htmlFor="correo">EMAIL</label>
             <input
               className="bg-zinc-700 p-2 rounded-md mt-4 w-full"
@@ -58,6 +48,16 @@ const page = () => {
               name="correo"
               placeholder="user@example.com"
               onChange={(e) => setCorreo(e.target.value)}
+            />
+          </div>
+          <div className="basis-1/2 my-4 ml-1">
+            <label htmlFor="correo">NAME</label>
+            <input
+              className="bg-zinc-700 p-2 rounded-md mt-4 w-full"
+              type="text"
+              name="usuario"
+              placeholder="User"
+              onChange={(e) => setNombre(e.target.value)}
             />
           </div>
         </div>
