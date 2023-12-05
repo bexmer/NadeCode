@@ -1,9 +1,17 @@
-import React from 'react';
-import '@/components/todo.css';
+"use client";
+import React from "react";
+import { useRouter } from "next/navigation";
+import "@/components/todo.css";
 
 export default function CardIA({ data }) {
+  const router = useRouter();
   return (
-    <div className="CardIA p-5 m-2 rounded-xl">
+    <div
+      className="CardIA p-5 m-2 rounded-xl"
+      onClick={() => {
+        router.push(`/${data.id}`);
+      }}
+    >
       {/* Imagen */}
       <div className="flex justify-center bg-black">
         <img

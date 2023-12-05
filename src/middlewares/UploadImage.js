@@ -11,12 +11,10 @@ const UploadImage = async (bufferImage) => {
     cloudinary.uploader
       .upload_stream({}, (err, result) => {
         if (err) reject(err);
-
         resolve(result);
       })
       .end(bufferImage);
   });
-
   return responseImage;
 };
 

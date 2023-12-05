@@ -15,7 +15,10 @@ export default function Principal() {
 
   return (
     <div className="prinCar flex justify-center items-center">
-      <div className="basis-3/5"></div>
+      <div className="basis-3/5 estoPart">
+        <div className="prt1 bg-zinc-700">a</div>
+        <div className="prt2 bg-gray-500">b</div>
+      </div>
 
       <div className="laB basis-2/5 p-6">
         <div className="flex flex-row justify-center">
