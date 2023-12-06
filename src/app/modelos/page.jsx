@@ -50,7 +50,7 @@ export default function Modelos() {
       <div className="grid grid-cols-4">
         {posts.map((data) => (
           <>
-            <CardIA key={data.id} data={data} />
+            <CardIA key={data.Titulo + data.id} data={data} />
           </>
         ))}
       </div>

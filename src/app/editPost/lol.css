@@ -1,0 +1,65 @@
+.divTD{
+    height: 90vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.input1 {
+    background-color: #212121;
+    border-radius: 2px;
+    /* box-shadow: 3px 3px 2px rgb(249, 255, 85); */
+  }
+  
+  .input1:focus {
+    color: rgb(240, 240, 240);
+    background-color: #212121;
+    outline-color: rgb(255, 196, 0);
+    box-shadow: -3px -3px 15px rgb(255, 196, 0);
+    transition: .1s;
+    transition-property: box-shadow;
+  }
+
+.dimeInput{
+  width: 500px;
+  margin: 0 0 30px 0;
+  padding: 10px 10px;
+}
+
+.buttonUE{
+  width: 500px;
+  border-radius: 2px;
+  padding: 5px 10px;
+  transition: .3s ease-in-out;
+}
+
+.buttonUE:hover{
+  opacity: .8;
+}
+
+.buttonUE:active{
+  background-color: #0c8729;
+  opacity: 1;
+}
+
+.textarea1{
+  height: 50vh;
+    width: 100%;
+    resize: none;
+}
+
+.SubirImage{
+  display: flex;
+  width: 90vh;
+  text-align: center;
+  background-color: #212121;
+ border: none;
+}
+
+.catDos{
+  width: 44vh;
+  height: 30px;
+  padding: 5px;
+  background-color: #212121;
+  border-radius: 5px;
+}

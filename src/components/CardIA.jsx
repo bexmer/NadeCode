@@ -1,9 +1,9 @@
-import React from 'react';
 import '@/components/todo.css';
+import Link from 'next/link';
 
 export default function CardIA({ data }) {
   return (
-    <div className="CardIA p-5 m-2 rounded-xl">
+    <Link href={`/${data.id}`} className="CardIA p-5 m-2 rounded-xl">
       {/* Imagen */}
       <div className="flex justify-center bg-black">
         <img
@@ -31,6 +31,6 @@ export default function CardIA({ data }) {
         </div>
         <div className="rounded-lg bg-violet-950 py-1 px-3">Free</div>
       </div>
-    </div>
+    </Link>
   );
 }

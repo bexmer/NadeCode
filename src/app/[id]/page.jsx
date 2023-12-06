@@ -1,3 +1,9 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+import { UseGlobalContext } from '../context/Context';
+import { useRouter } from 'next/navigation';
+
 // import data from "@/api/ia.json";
 
 // async function loadPost(id) {
@@ -6,9 +12,45 @@
 // }
 
 export default async function IAverPage({ params }) {
-  console.log(params.iaId);
+  // const data = await loadPost(params.iaId)zz;
+  const [post, setPost] = useState();
+  const context = UseGlobalContext();
+  const router = useRouter();
 
-  // const data = await loadPost(params.iaId);
+  useEffect(() => {
+    const loadPost = async () => {
+      const response = await fetch(
+        `${location.origin}/api/showPost/${params.id}`,
+        {
+          method: 'GET',
+        }
+      );
+
+      const data = await response.json();
+
+      setPost(data.message[0]);
+    };
+
+    loadPost();
+  }, []);
+
+  const handleEdit = async () => {
+    context.setPosts(post);
+    router.push(`${location.origin}/editPost`);
+  };
+
+  const handleDelete = async () => {
+    const response = await fetch(
+      `${location.origin}/api/deleteProduct/${params.id}`,
+      { method: 'GET' }
+    );
+
+    const data = await response.json();
+
+    if (data.status === 200) {
+      router.push('/modelos');
+    }
+  };
 
   // function estado() {
   //   if (data.Estado == true) {
@@ -21,8 +63,12 @@ export default async function IAverPage({ params }) {
     <div className="flex">
       {/* Lado izquierdo */}
       <div className="basis-7/12 p-6  flex-col">
-        <div className="bg-slate-500 imgCard rounded-sm">
-          <img src="" alt="" />
+        <div className="bg-slate-500 imgCard rounded-sm flex justify-center">
+          <img
+            src={post !== undefined ? post.Imagen : ''}
+            className="h-full"
+            alt=""
+          />
         </div>
 
         <div className="flex text-center my-7 font-semibold">
@@ -41,10 +87,16 @@ export default async function IAverPage({ params }) {
           <button className="buttCard  py-1 rounded-sm basis-1/3 bg-green-600">
             Acceder
           </button>
-          <button className="buttCard  py-1 rounded-sm basis-1/3 mx-4 bg-pink-800">
+          <button
+            onClick={() => handleEdit()}
+            className="buttCard  py-1 rounded-sm basis-1/3 mx-4 bg-pink-800"
+          >
             Edit
           </button>
-          <button className="buttCard  py-1 rounded-sm basis-1/3 bg-red-600">
+          <button
+            onClick={() => handleDelete()}
+            className="buttCard  py-1 rounded-sm basis-1/3 bg-red-600"
+          >
             Delete
           </button>
         </div>
@@ -74,20 +126,11 @@ export default async function IAverPage({ params }) {
 
       {/* Lado derecho */}
       <div className="basis-5/12 p-6 ladoDerecho">
-        <h1 className="text-center font-bold text-xl mb-4">Titulo</h1>
+        <h1 className="text-center font-bold text-xl mb-4">
+          {post !== undefined ? post.Titulo : ''}
+        </h1>
         <p className="text-justify">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque odit
-          consequatur fugiat voluptate laboriosam, quaerat ab esse obcaecati
-          debitis cupiditate sit accusantium quasi necessitatibus quia
-          distinctio blanditiis, pariatur earum neque repudiandae assumenda,
-          voluptatum ex incidunt? Exercitationem eveniet, obcaecati commodi
-          nulla tempore voluptas quisquam suscipit. Iste qui non, perspiciatis
-          harum laborum, dicta molestias aspernatur sunt voluptate sit esse
-          optio reprehenderit quasi quos error, architecto beatae ratione eaque
-          enim ab vero voluptatibus cum! Tempora consequuntur corporis voluptate
-          ipsam autem beatae? Eos impedit quaerat dolorum aut! Consectetur
-          suscipit quod odit ut iusto eveniet eum sit maiores dolorem
-          repudiandae! Placeat at accusamus debitis voluptate!
+          {post !== undefined ? post.Descripcion : ''}
         </p>
       </div>
     </div>

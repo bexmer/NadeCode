@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import uploadImages from '@/middlewares/UploadImage';
-import { supabase } from "@/libs/database"
+import { supabase } from '@/libs/database';
 
 export const POST = async (request) => {
   try {
@@ -27,10 +27,10 @@ export const POST = async (request) => {
 
     if (error) return NextResponse.error(error);
 
-    return NextResponse.json(
-      { message: 'Todo salió correctamente' },
-      { status: 200 }
-    );
+    return NextResponse.json({
+      message: 'Todo salió correctamente',
+      status: 200,
+    });
   } catch (error) {
     return NextResponse.json({ message: 'Algo salió mal' }, { status: 500 });
   }
