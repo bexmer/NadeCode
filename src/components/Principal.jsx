@@ -16,8 +16,30 @@ export default function Principal() {
   return (
     <div className="prinCar flex justify-center items-center">
       <div className="basis-3/5 estoPart">
-        <div className="prt1 bg-zinc-700">a</div>
-        <div className="prt2 bg-gray-500">b</div>
+        <div className="prt1 bg-stone-800">
+          <div className="container flex justify-center items-center">
+            <div className="loader">
+              <svg viewBox="0 0 80 80">
+                <circle id="test" cx="40" cy="40" r="32"></circle>
+              </svg>
+            </div>
+
+            <div className="loader triangle">
+              <svg viewBox="0 0 86 80">
+                <polygon points="43 8 79 72 7 72"></polygon>
+              </svg>
+            </div>
+
+            <div className="loader">
+              <svg viewBox="0 0 80 80">
+                <rect x="8" y="8" width="64" height="64"></rect>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div className="prt2 bg-stone-800">
+          <h1 className="pl-5">For the AI ​​tools you need.</h1>
+        </div>
       </div>
 
       <div className="laB basis-2/5 p-6">
